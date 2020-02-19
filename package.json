@@ -1,0 +1,9 @@
+{
+  "name": "flash-mobility-server",
+  "version": "1.0.0",
+  "description": "server for flash mobility",
+  "main": "index.js",
+  "repository": "https://github.com/seongjin605/flash-mobility-server.git",
+  "author": "preciouStar <seongjin605@users.noreply.github.com>",
+  "license": "MIT"
+}
