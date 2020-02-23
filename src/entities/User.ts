@@ -7,7 +7,6 @@ import {
     CreateDateColumn,
     UpdateDateColumn
 } from 'typeorm';
-import { createDeflateRaw } from 'zlib';
 
 @Entity()
 class User extends BaseEntity {
