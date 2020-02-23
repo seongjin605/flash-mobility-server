@@ -25,6 +25,7 @@
         "typeorm": "^0.2.22"
     },
     "devDependencies": {
+        "@types/bcrypt": "^3.0.0",
         "@types/node": "^13.7.2",
         "babel-runtime": "^6.26.0",
         "gql-merge": "^0.0.6",
