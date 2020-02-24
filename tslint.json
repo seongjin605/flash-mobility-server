@@ -9,8 +9,7 @@
         "object-literal-sort-keys": false,
         "ordered-imports": true,
         "interface-name": false,
-        "strict-null-checks": false,
-        "no-string-literal": false
+        "strict-null-checks": false
     },
     "rulesDirectory": []
 }
