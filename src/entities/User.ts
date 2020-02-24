@@ -2,13 +2,13 @@ import bycrypt from 'bcrypt';
 import { IsEmail } from 'class-validator';
 import {
     BaseEntity,
-    Entity,
-    PrimaryGeneratedColumn,
+    BeforeInsert,
+    BeforeUpdate,
     Column,
     CreateDateColumn,
-    UpdateDateColumn,
-    BeforeInsert,
-    BeforeUpdate
+    Entity,
+    PrimaryGeneratedColumn,
+    UpdateDateColumn
 } from 'typeorm';
 
 const BCRYPT_ROUNDS = 10;
