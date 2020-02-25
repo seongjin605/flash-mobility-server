@@ -7,8 +7,8 @@ import {
     UpdateDateColumn,
     ManyToOne
 } from 'typeorm';
-import { rideStatus } from 'src/types/types';
 import User from './User';
+import { rideStatus } from '../types/types';
 
 const RIDE_STATUS = [
     'ACCEPTED',
