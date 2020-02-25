@@ -18,7 +18,7 @@ const resolvers: Resolvers = {
                     return {
                         ok: true,
                         error: null,
-                        token: 'Comming Soon'
+                        token: 'Comming Soon, already exist.'
                     };
                 }
             } catch (error) {
@@ -36,7 +36,7 @@ const resolvers: Resolvers = {
                 return {
                     ok: true,
                     error: null,
-                    token: 'Common Soon'
+                    token: 'Common Soon, created. '
                 };
             } catch (error) {
                 return {

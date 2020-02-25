@@ -4,7 +4,7 @@
 
 ### Public Resolvers:
 
--   [ ] Sign in / Sign Up with Facebook
+-   [x] Sign in / Sign Up with Facebook
 -   [ ] Sign in with Email
 -   [ ] Start phone number verification
 -   [ ] Complete phone number verification
@@ -14,6 +14,8 @@
 
 ### Private Resolvers:
 
+-   [ ] Generate JWT
+-   [ ] Verify JWT
 -   [ ] Verify email
 -   [ ] Get user profile
 -   [ ] Update user profile
