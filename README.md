@@ -6,7 +6,7 @@
 
 -   [x] Sign in / Sign Up with Facebook
 -   [x] Sign in with Email
--   [ ] Start phone number verification
+-   [x] Start phone number verification
 -   [ ] Complete phone number verification
 -   [ ] Sign up with email
 

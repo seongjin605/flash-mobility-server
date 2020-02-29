@@ -23,6 +23,9 @@ class Verification extends BaseEntity {
     @Column({ type: 'text' })
     payload: string;
 
+    @Column({ type: 'boolean', default: false })
+    verified: false;
+
     @Column({ type: 'text' })
     key: string;
 
