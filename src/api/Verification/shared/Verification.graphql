@@ -2,6 +2,7 @@ type Verification {
     id: Int!
     target: String!
     payload: String!
+    verified: Boolean!
     creatdAt: String!
     updatedAt: String!
 }

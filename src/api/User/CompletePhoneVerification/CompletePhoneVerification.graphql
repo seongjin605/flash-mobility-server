@@ -1,0 +1,12 @@
+type CompletePhoneVerificationResponse {
+    ok: Boolean!
+    error: String
+    token: String
+}
+
+type mutation {
+    CompletePhoneVerification(
+        phoneNumber: String!
+        key: String!
+    ): CompletePhoneVerificationResponse!
+}
