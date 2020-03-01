@@ -44,6 +44,16 @@ type Ride {
   updatedAt: String
 }
 
+type CompletePhoneVerificationResponse {
+  ok: Boolean!
+  error: String
+  token: String
+}
+
+type mutation {
+  CompletePhoneVerification(phoneNumber: String!, key: String!): CompletePhoneVerificationResponse!
+}
+
 type EmailSignInResponse {
   ok: Boolean!
   error: String
@@ -102,6 +112,7 @@ type Verification {
   id: Int!
   target: String!
   payload: String!
+  verified: Boolean!
   creatdAt: String!
   updatedAt: String!
 }
