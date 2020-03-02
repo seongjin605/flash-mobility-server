@@ -4,18 +4,23 @@
 
 ### Public Resolvers:
 
--   [x] Sign in / Sign Up with Facebook
+-   [x] Sign in / Sign Up with Facebo ok
 -   [x] Sign in with Email
 -   [x] Start phone number verification
--   [ ] Complete phone number verification
+-   [x] Complete phone number verification
 -   [ ] Sign up with email
 
 ---
 
-### Private Resolvers:
+### Authentication: 
 
 -   [ ] Generate JWT
 -   [ ] Verify JWT
+
+--- 
+
+### Private Resolvers:
+
 -   [ ] Verify email
 -   [ ] Get user profile
 -   [ ] Update user profile

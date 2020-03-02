@@ -1,16 +1,16 @@
 import {
-    CompletePhoneVerificationmutationArgs,
-    CompletePhoneVerificationResponse
+    CompletePhoneVerificationResponse,
+    CompletePhoneVerificationMutationArgs
 } from './../../../types/graph.d';
-import { Resolvers } from './../../../types/resolvers.d';
 import Verification from '../../../entities/Verification';
 import User from '../../../entities/User';
+import { Resolvers } from '../../../types/resolvers';
 
 const resolvers: Resolvers = {
     Mutation: {
         CompletePhoneVerification: async (
             _,
-            args: CompletePhoneVerificationmutationArgs
+            args: CompletePhoneVerificationMutationArgs
         ): Promise<CompletePhoneVerificationResponse> => {
             const { phoneNumber, key } = args;
             try {
