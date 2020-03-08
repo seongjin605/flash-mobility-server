@@ -43,3 +43,9 @@
 
 -   [ ] Get ride history
 -   [ ] See ride detail
+
+--- 
+
+## etc
+* User GraphQL resolvers process
+> StarPhoneVerification -> CompletePhoneVerifiaction -> EmailSignUp -> EmailSignIn
