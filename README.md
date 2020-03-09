@@ -14,8 +14,8 @@
 
 ### Authentication: 
 
--   [ ] Generate JWT
--   [ ] Verify JWT
+-   [x] Generate JWT
+-   [x] Verify JWT
 
 --- 
 
