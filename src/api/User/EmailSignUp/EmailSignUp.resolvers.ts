@@ -1,3 +1,4 @@
+import { sendVerificationEmail } from './../../../utils/sendEmail';
 import {
     EmailSignUpResponse,
     EmailSignUpMutationArgs
@@ -23,19 +24,37 @@ const resolvers: Resolvers = {
                         token: null
                     };
                 } else {
-                    const newUser = await User.create({ ...args }).save();
-                    if (newUser.email) {
-                        const emailVerification = await Verification.create({
-                            payload: newUser.email,
-                            target: 'EMAIL'
-                        });
+                    const phoneVerification = await Verification.find({
+                        payload: args.phoneNumber,
+                        verified: true
+                    });
+                    if (phoneVerification) {
+                        const newUser = await User.create({ ...args }).save();
+                        if (newUser.email) {
+                            const emailVerification = await Verification.create(
+                                {
+                                    payload: newUser.email,
+                                    target: 'EMAIL'
+                                }
+                            );
+                            await sendVerificationEmail(
+                                newUser.fullName,
+                                emailVerification.key
+                            );
+                        }
+                        const token = createJWT(newUser.id);
+                        return {
+                            ok: true,
+                            error: null,
+                            token
+                        };
+                    } else {
+                        return {
+                            ok: false,
+                            error: 'You haven verified your phone number',
+                            token: null
+                        };
                     }
-                    const token = createJWT(newUser.id);
-                    return {
-                        ok: true,
-                        error: null,
-                        token
-                    };
                 }
             } catch (error) {
                 return {
