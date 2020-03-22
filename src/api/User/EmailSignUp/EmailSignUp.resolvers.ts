@@ -36,7 +36,7 @@ const resolvers: Resolvers = {
                                     payload: newUser.email,
                                     target: 'EMAIL'
                                 }
-                            );
+                            ).save();
                             await sendVerificationEmail(
                                 newUser.fullName,
                                 emailVerification.key
