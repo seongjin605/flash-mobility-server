@@ -21,7 +21,9 @@
 
 ### Private Resolvers:
 
--   [ ] Verify email
+-   [x] Get MyProfile
+-   [ ] Request Email Verification
+-   [ ] Complete Email Verification
 -   [ ] Get user profile
 -   [ ] Update user profile
 -   [ ] Toggle driving mode
