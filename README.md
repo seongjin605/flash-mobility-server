@@ -8,7 +8,7 @@
 -   [x] Sign in with Email
 -   [x] Start phone number verification
 -   [x] Complete phone number verification
--   [ ] Sign up with email
+-   [x] Sign up with email
 
 ---
 
