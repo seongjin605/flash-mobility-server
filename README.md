@@ -24,9 +24,8 @@
 -   [x] Get MyProfile
 -   [x] Request Email Verification
 -   [x] Complete Email Verification
--   [ ] Get user profile
--   [ ] Update user profile
--   [ ] Toggle driving mode
+-   [x] Update user profile
+-   [x] Toggle driving mode
 -   [ ] Report location / orientation
 -   [ ] Add place
 -   [ ] Edit place
