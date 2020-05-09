@@ -15,6 +15,7 @@ import {
 import Chat from './Chat';
 import Message from './Message';
 import Ride from './Ride';
+import Place from './Place';
 
 const BCRYPT_ROUNDS = 10;
 
@@ -72,29 +73,20 @@ class User extends BaseEntity {
     @Column({ type: 'text', nullable: true })
     fbId: String;
 
-    @ManyToOne(
-        type => Chat,
-        chat => chat.participants
-    )
+    @ManyToOne((type) => Chat, (chat) => chat.participants)
     chat: Chat;
 
-    @OneToMany(
-        type => Message,
-        message => message.user
-    )
+    @OneToMany((type) => Message, (message) => message.user)
     messages: Message[];
 
-    @OneToMany(
-        type => Ride,
-        ride => ride.passenger
-    )
+    @OneToMany((type) => Ride, (ride) => ride.passenger)
     ridesAsPassenger: Ride[];
 
-    @OneToMany(
-        type => Ride,
-        ride => ride.driver
-    )
+    @OneToMany((type) => Ride, (ride) => ride.driver)
     ridesAsDriver: Ride[];
+
+    @OneToMany((type) => Place, (place) => place.user)
+    places: Place[];
 
     @CreateDateColumn()
     createdAt: string;
