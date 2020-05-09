@@ -214,6 +214,11 @@ export interface ToggleDrivingModeResponse {
     error: string | null;
 }
 
+export interface ToggleDrivingModeResponse {
+  ok: boolean;
+  error: string | null;
+}
+
 export interface UpdateMyProfileResponse {
     ok: boolean;
     error: string | null;
