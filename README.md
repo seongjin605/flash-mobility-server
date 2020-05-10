@@ -30,6 +30,7 @@
 -   [x] Add place
 -   [ ] Edit place
 -   [ ] Delete place
+-   [ ] Get my places
 -   [ ] See nearby drivers
 -   [ ] Subscribe to nearby drivers
 -   [ ] Request a ride
