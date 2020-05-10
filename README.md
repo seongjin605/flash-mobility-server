@@ -26,10 +26,11 @@
 -   [x] Complete Email Verification
 -   [x] Update user profile
 -   [x] Toggle driving mode
--   [ ] Report location / orientation
--   [ ] Add place
+-   [x] Report location / orientation
+-   [x] Add place
 -   [ ] Edit place
 -   [ ] Delete place
+-   [ ] Get my places
 -   [ ] See nearby drivers
 -   [ ] Subscribe to nearby drivers
 -   [ ] Request a ride
