@@ -28,8 +28,8 @@
 -   [x] Toggle driving mode
 -   [x] Report location / orientation
 -   [x] Add place
--   [ ] Edit place
--   [ ] Delete place
+-   [x] Edit place
+-   [x] Delete place
 -   [ ] Get my places
 -   [ ] See nearby drivers
 -   [ ] Subscribe to nearby drivers
