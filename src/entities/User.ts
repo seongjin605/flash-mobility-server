@@ -86,7 +86,7 @@ class User extends BaseEntity {
     ridesAsDriver: Ride[];
 
     @OneToMany((type) => Place, (place) => place.user)
-    places: Place[];
+    places: Place[] | any;
 
     @CreateDateColumn()
     createdAt: string;
