@@ -6,7 +6,7 @@ import { Between, getRepository } from 'typeorm';
 
 const resolvers: Resolvers = {
     Query: {
-        GetNearbyDrviers: privateResolver(
+        GetNearbyDrivers: privateResolver(
             async (_, __, { req }): Promise<GetNearbyDriversResponse> => {
                 const user: User = req.user;
                 const { lastLat, lastLng } = user;
