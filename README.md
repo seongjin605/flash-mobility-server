@@ -30,11 +30,11 @@
 -   [x] Add place
 -   [x] Edit place
 -   [x] Delete place
--   [ ] Get my places
+-   [x] Get my places
 -   [ ] See nearby drivers
 -   [ ] Subscribe to nearby drivers
 -   [ ] Request a ride
--   [ ] Get nearby rides
+-   [ ] Get nearby Ride Requets
 -   [ ] Subscribe to nearby ride requests
 -   [ ] Subscribe to ride status
 -   [ ] Get chat room messages
