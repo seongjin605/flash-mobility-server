@@ -15,9 +15,12 @@ class App {
         this.app = new GraphQLServer({
             schema,
             context: (req) => {
+                // HTTP request가 아닌 WebSocket request를 리턴한다
+                const { connection: { context = null } = {} } = req;
                 return {
                     req: req.request,
-                    pubSub: this.pubSub
+                    pubSub: this.pubSub,
+                    context
                 };
             }
         });
