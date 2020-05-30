@@ -31,8 +31,8 @@
 -   [x] Edit place
 -   [x] Delete place
 -   [x] Get my places
--   [ ] See nearby drivers
--   [ ] Subscribe to nearby drivers
+-   [x] See nearby drivers
+-   [x] Subscribe to nearby drivers
 -   [ ] Request a ride
 -   [ ] Get nearby Ride Requets
 -   [ ] Subscribe to nearby ride requests

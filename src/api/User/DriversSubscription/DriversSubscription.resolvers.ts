@@ -20,7 +20,7 @@ const resolvers = {
                     return (
                         driverLastLat >= userLastLat - 0.05 &&
                         driverLastLat <= userLastLat + 0.05 &&
-                        driverLastLng <= userLastLng - 0.05 &&
+                        driverLastLng >= userLastLng - 0.05 &&
                         driverLastLng <= userLastLng + 0.05
                     );
                 }
