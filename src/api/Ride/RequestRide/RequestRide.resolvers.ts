@@ -13,7 +13,7 @@ const resolvers: Resolvers = {
             async (
                 _,
                 args: RequestRideMutationArgs,
-                { req }
+                { req, pubSub }
             ): Promise<RequestRideResponse> => {
                 const user: User = req.user;
                 try {
@@ -21,7 +21,9 @@ const resolvers: Resolvers = {
                         ...args,
                         passenger: user
                     }).save();
-
+                    pubSub.publish('rideRequest', {
+                        NearByRideSubscription: ride
+                    });
                     return {
                         ok: true,
                         error: null,
