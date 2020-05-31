@@ -23,7 +23,7 @@ class Ride extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'boolean', enum: RIDE_STATUS })
+    @Column({ type: 'text', enum: RIDE_STATUS, default: 'REQUESTING' })
     status: rideStatus;
 
     @Column({ type: 'text' })
@@ -53,8 +53,14 @@ class Ride extends BaseEntity {
     @Column({ type: 'text' })
     distance: string;
 
+    @Column({ nullable: true })
+    passengerId: number;
+
     @ManyToOne((type) => User, (user) => user.ridesAsPassenger)
     passenger: User;
+
+    @Column({ nullable: true })
+    driverId: number;
 
     @ManyToOne((type) => User, (user) => user.ridesAsDriver, { nullable: true })
     driver: User;

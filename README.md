@@ -33,9 +33,11 @@
 -   [x] Get my places
 -   [x] See nearby drivers
 -   [x] Subscribe to nearby drivers
--   [ ] Request a ride
--   [ ] Get nearby Ride Requets
--   [ ] Subscribe to nearby ride requests
+-   [x] Request a ride
+-   [x] Get nearby Ride Requets
+-   [x] Subscribe to nearby ride requests
+-   [x] Update ride request
+-   [ ] Get Ride
 -   [ ] Subscribe to ride status
 -   [ ] Get chat room messages
 -   [ ] Subscribe to chat room messages

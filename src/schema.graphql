@@ -25,6 +25,7 @@ type Mutation {
   DeletePlace(placeId: Int!): DeletePlaceResponse!
   EditPlace(placeId: Int!, name: String, isFav: Boolean): EditPlaceResponse!
   RequestRide(pickUpAddress: String!, pickUpLat: Float!, pickUpLng: Float!, dropOffAddress: String!, dropOffLat: Float!, dropOffLng: Float!, price: Float!, distance: String!, duration: String!): RequestRideResponse!
+  UpdateRideStatus(rideId: Int!, status: StatusOptions!): UpdateRideStatusResponse
   CompleteEmailVerification(key: String!): CompleteEmailVerificationResponse!
   CompletePhoneVerification(phoneNumber: String!, key: String!): CompletePhoneVerificationResponse!
   EmailSignIn(email: String!, password: String!): EmailSignInResponse!
@@ -55,6 +56,8 @@ type GetMyPlacesResponse {
 
 type Query {
   GetMyPlaces: GetMyPlacesResponse!
+  GetNearbyRide: GetNearbyRideResponse!
+  GetRide(rideId: Int!): GetRideResponse!
   GetMyProfile: GetMyProfileResonse!
   GetNearbyDrivers: GetNearbyDriversResponse!
 }
@@ -70,6 +73,23 @@ type Place {
   user: User!
   createdAt: String!
   updatedAt: String
+}
+
+type GetNearbyRideResponse {
+  ok: Boolean!
+  error: String
+  ride: Ride
+}
+
+type GetRideResponse {
+  ok: Boolean!
+  error: String
+  ride: Ride
+}
+
+type Subscription {
+  NearByRideSubscription: Ride
+  DriversSubscription: User
 }
 
 type RequestRideResponse {
@@ -90,10 +110,25 @@ type Ride {
   price: Float!
   duration: String!
   distance: String!
+  driverId: Int
   driver: User!
+  passengerId: Int!
   passenger: User!
   createdAt: String!
   updatedAt: String
+}
+
+type UpdateRideStatusResponse {
+  ok: Boolean!
+  error: String
+}
+
+enum StatusOptions {
+  ACCEPTED
+  FINIHSED
+  CANCELED
+  REQUESTING
+  ONROUTE
 }
 
 type CompleteEmailVerificationResponse {
@@ -105,10 +140,6 @@ type CompletePhoneVerificationResponse {
   ok: Boolean!
   error: String
   token: String
-}
-
-type Subscription {
-  DriversSubscription: User
 }
 
 type EmailSignInResponse {
