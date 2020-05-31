@@ -71,7 +71,7 @@ class User extends BaseEntity {
     lastOrientation: number;
 
     @Column({ type: 'text', nullable: true })
-    fbId: String;
+    fbId: string;
 
     @ManyToOne((type) => Chat, (chat) => chat.participants)
     chat: Chat;
