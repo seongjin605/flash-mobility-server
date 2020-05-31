@@ -23,7 +23,7 @@ class Ride extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'boolean', enum: RIDE_STATUS })
+    @Column({ type: 'text', enum: RIDE_STATUS, default: 'REQUESTING' })
     status: rideStatus;
 
     @Column({ type: 'text' })
