@@ -1,4 +1,4 @@
-import bycrypt from 'bcrypt';
+import bcrypt from 'bcrypt';
 import { IsEmail } from 'class-validator';
 import {
     BaseEntity,
@@ -20,8 +20,7 @@ const BCRYPT_ROUNDS = 10;
 
 @Entity()
 class User extends BaseEntity {
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn() id: number;
 
     @Column({ type: 'text', nullable: true })
     @IsEmail()
@@ -48,7 +47,7 @@ class User extends BaseEntity {
     @Column({ type: 'boolean', default: false })
     verifiedPhoneNumber: boolean;
 
-    @Column({ type: 'text', default: false })
+    @Column({ type: 'text' })
     profilePhoto: string;
 
     @Column({ type: 'boolean', default: false })
@@ -88,20 +87,18 @@ class User extends BaseEntity {
     ridesAsDriver: Ride[];
 
     @OneToMany((type) => Place, (place) => place.user)
-    places: Place[] | any;
+    places: Place[];
 
-    @CreateDateColumn()
-    createdAt: string;
+    @CreateDateColumn() createdAt: string;
 
-    @UpdateDateColumn() ㅅ;
-    updatedAt: string;
+    @UpdateDateColumn() updatedAt: string;
 
     get fullName(): string {
         return `${this.firstName} ${this.lastName}`;
     }
 
     public comparePassword(password: string): Promise<boolean> {
-        return bycrypt.compare(password, this.password);
+        return bcrypt.compare(password, this.password);
     }
 
     @BeforeInsert()
@@ -114,7 +111,7 @@ class User extends BaseEntity {
     }
 
     private hashPassword(password: string): Promise<string> {
-        return bycrypt.hash(password, BCRYPT_ROUNDS);
+        return bcrypt.hash(password, BCRYPT_ROUNDS);
     }
 }
 
