@@ -37,17 +37,17 @@
 -   [x] Get nearby Ride Requets
 -   [x] Subscribe to nearby ride requests
 -   [x] Update ride request
--   [ ] Create a chat room
--   [ ] Get Ride
--   [ ] Subscribe to ride status
--   [ ] Get chat room messages
--   [ ] Subscribe to chat room messages
--   [ ] Send a chat messages
+-   [x] Create a chat room
+-   [x] Get Ride
+-   [x] Subscribe to ride status
+-   [x] Get chat room messages
+-   [x] Subscribe to chat room messages
+-   [x] Send a chat messages
 
 ## Code Chllenge
 
--   [ ] Get ride history
--   [ ] See ride detail
+-   [x] Get ride history
+-   [x] See ride detail
 
 --- 
 

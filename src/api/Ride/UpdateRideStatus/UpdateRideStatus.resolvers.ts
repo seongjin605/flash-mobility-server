@@ -32,7 +32,7 @@ const resolvers: Resolvers = {
                                 user.isTaken = true;
                                 user.save();
                             }
-                            Chat.create({
+                            const chat = Chat.create({
                                 driver: user,
                                 passenger: ride?.passenger
                             });
